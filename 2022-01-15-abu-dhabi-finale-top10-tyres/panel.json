@@ -1,0 +1,421 @@
+{
+  "id": 2,
+  "gridPos": {
+    "h": 9,
+    "w": 12,
+    "x": 0,
+    "y": 0
+  },
+  "type": "state-timeline",
+  "title": "2021 Abu Dhabi GP - Tyre Strategy",
+  "datasource": {
+    "type": "marcusolsson-csv-datasource",
+    "uid": "y_HQtIJnk"
+  },
+  "fieldConfig": {
+    "defaults": {
+      "custom": {
+        "lineWidth": 3,
+        "fillOpacity": 87
+      },
+      "color": {
+        "mode": "fixed"
+      },
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          {
+            "color": "green",
+            "value": null
+          }
+        ]
+      },
+      "mappings": [
+        {
+          "options": {
+            "DONE": {
+              "color": "transparent",
+              "index": 3,
+              "text": "🏁"
+            },
+            "HARD": {
+              "color": "#ffffff",
+              "index": 2,
+              "text": "Hard"
+            },
+            "MEDIUM": {
+              "color": "semi-dark-yellow",
+              "index": 1,
+              "text": "Medium"
+            },
+            "SOFT": {
+              "color": "dark-red",
+              "index": 0,
+              "text": "Soft"
+            }
+          },
+          "type": "value"
+        }
+      ],
+      "links": [
+        {
+          "targetBlank": true,
+          "title": "Etihad Airways Abu Dhabi GP 2021 - Race Results",
+          "url": "https://www.formula1.com/en/results.html/2021/races/1107/abu-dhabi/race-result.html"
+        }
+      ],
+      "unit": "none"
+    },
+    "overrides": [
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "hamilton"
+        },
+        "properties": [
+          {
+            "id": "displayName",
+            "value": "🇬🇧 Lewis Hamilton"
+          },
+          {
+            "id": "links",
+            "value": [
+              {
+                "targetBlank": true,
+                "title": "Lewis Hamilton wikipedia page",
+                "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "max_verstappen"
+        },
+        "properties": [
+          {
+            "id": "displayName",
+            "value": "🇳🇱 Max Verstappen"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "sainz"
+        },
+        "properties": [
+          {
+            "id": "displayName",
+            "value": "🇪🇸 Carlos Sainz"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "tsunoda"
+        },
+        "properties": [
+          {
+            "id": "displayName",
+            "value": "🇯🇵 Yuki Tsunoda"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "gasly"
+        },
+        "properties": [
+          {
+            "id": "displayName",
+            "value": "🇫🇷 Pierre Gasly"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "bottas"
+        },
+        "properties": [
+          {
+            "id": "displayName",
+            "value": "🇫🇮 Valtteri Bottas"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "norris"
+        },
+        "properties": [
+          {
+            "id": "displayName",
+            "value": "🇬🇧 Lando Norris"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "alonso"
+        },
+        "properties": [
+          {
+            "id": "displayName",
+            "value": "🇪🇸 Fernando Alonso"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "ocon"
+        },
+        "properties": [
+          {
+            "id": "displayName",
+            "value": "🇫🇷 Esteban Ocon"
+          }
+        ]
+      },
+      {
+        "matcher": {
+          "id": "byName",
+          "options": "leclerc"
+        },
+        "properties": [
+          {
+            "id": "displayName",
+            "value": "🇲🇨 Charles Leclerc"
+          }
+        ]
+      }
+    ]
+  },
+  "options": {
+    "mergeValues": false,
+    "showValue": "auto",
+    "alignValue": "center",
+    "rowHeight": 0.88,
+    "legend": {
+      "displayMode": "hidden",
+      "placement": "bottom"
+    },
+    "tooltip": {
+      "mode": "single"
+    }
+  },
+  "targets": [
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "y_HQtIJnk"
+      },
+      "decimalSeparator": ".",
+      "delimiter": ",",
+      "header": true,
+      "hide": false,
+      "ignoreUnknown": false,
+      "path": "/2022-01-15-abu-dhabi-finale-top10-tyres/max_verstappen.csv",
+      "refId": "Max Verstappen",
+      "schema": [
+        {
+          "name": "datetime",
+          "type": "time"
+        }
+      ],
+      "skipRows": 0
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "y_HQtIJnk"
+      },
+      "decimalSeparator": ".",
+      "delimiter": ",",
+      "header": true,
+      "ignoreUnknown": false,
+      "path": "/2022-01-15-abu-dhabi-finale-top10-tyres/hamilton.csv",
+      "refId": "Lewis Hamilton",
+      "schema": [
+        {
+          "name": "datetime",
+          "type": "time"
+        },
+        {
+          "name": "tire",
+          "type": "string"
+        }
+      ],
+      "skipRows": 0
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "y_HQtIJnk"
+      },
+      "decimalSeparator": ".",
+      "delimiter": ",",
+      "header": true,
+      "hide": false,
+      "ignoreUnknown": false,
+      "path": "/2022-01-15-abu-dhabi-finale-top10-tyres/sainz.csv",
+      "refId": "Carlos Sainz",
+      "schema": [
+        {
+          "name": "datetime",
+          "type": "time"
+        }
+      ],
+      "skipRows": 0
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "y_HQtIJnk"
+      },
+      "decimalSeparator": ".",
+      "delimiter": ",",
+      "header": true,
+      "hide": false,
+      "ignoreUnknown": false,
+      "path": "/2022-01-15-abu-dhabi-finale-top10-tyres/tsunoda.csv",
+      "refId": "Yuki Tsunoda",
+      "schema": [
+        {
+          "name": "datetime",
+          "type": "time"
+        }
+      ],
+      "skipRows": 0
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "y_HQtIJnk"
+      },
+      "decimalSeparator": ".",
+      "delimiter": ",",
+      "header": true,
+      "hide": false,
+      "ignoreUnknown": false,
+      "path": "/2022-01-15-abu-dhabi-finale-top10-tyres/gasly.csv",
+      "refId": "Pierre Gasly",
+      "schema": [
+        {
+          "name": "datetime",
+          "type": "time"
+        }
+      ],
+      "skipRows": 0
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "y_HQtIJnk"
+      },
+      "decimalSeparator": ".",
+      "delimiter": ",",
+      "header": true,
+      "hide": false,
+      "ignoreUnknown": false,
+      "path": "/2022-01-15-abu-dhabi-finale-top10-tyres/bottas.csv",
+      "refId": "Valtteri Bottas",
+      "schema": [
+        {
+          "name": "datetime",
+          "type": "time"
+        }
+      ],
+      "skipRows": 0
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "y_HQtIJnk"
+      },
+      "decimalSeparator": ".",
+      "delimiter": ",",
+      "header": true,
+      "hide": false,
+      "ignoreUnknown": false,
+      "path": "/2022-01-15-abu-dhabi-finale-top10-tyres/norris.csv",
+      "refId": "Lando Norris",
+      "schema": [
+        {
+          "name": "datetime",
+          "type": "time"
+        }
+      ],
+      "skipRows": 0
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "y_HQtIJnk"
+      },
+      "decimalSeparator": ".",
+      "delimiter": ",",
+      "header": true,
+      "hide": false,
+      "ignoreUnknown": false,
+      "path": "/2022-01-15-abu-dhabi-finale-top10-tyres/alonso.csv",
+      "refId": "Fernando Alonso",
+      "schema": [
+        {
+          "name": "datetime",
+          "type": "time"
+        }
+      ],
+      "skipRows": 0
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "y_HQtIJnk"
+      },
+      "decimalSeparator": ".",
+      "delimiter": ",",
+      "header": true,
+      "hide": false,
+      "ignoreUnknown": false,
+      "path": "/2022-01-15-abu-dhabi-finale-top10-tyres/ocon.csv",
+      "refId": "Esteban Ocon",
+      "schema": [
+        {
+          "name": "datetime",
+          "type": "time"
+        }
+      ],
+      "skipRows": 0
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-csv-datasource",
+        "uid": "y_HQtIJnk"
+      },
+      "decimalSeparator": ".",
+      "delimiter": ",",
+      "header": true,
+      "hide": false,
+      "ignoreUnknown": false,
+      "path": "/2022-01-15-abu-dhabi-finale-top10-tyres/leclerc.csv",
+      "refId": "Charles Leclerc",
+      "schema": [
+        {
+          "name": "datetime",
+          "type": "time"
+        }
+      ],
+      "skipRows": 0
+    }
+  ],
+  "description": ""
+}
